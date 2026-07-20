@@ -6,6 +6,7 @@ import { TopBar } from "../components/TopBar";
 import { GroupLabel } from "../components/GroupedList";
 import { CARD } from "../lib/ui";
 import { ErrorNotice } from "../components/ErrorNotice";
+import { LoadingBlock } from "../components/Loading";
 import type { NotificationImportance } from "../lib/types";
 
 function ImportanceIcon({ importance }: { importance: NotificationImportance }) {
@@ -71,6 +72,7 @@ export function Notifications() {
               </button>
             </div>
           ))}
+          {isLoading && <LoadingBlock />}
           {!isLoading && items.length === 0 && (
             <div className="px-4 py-6 text-center text-[12.5px] opacity-50">
               {t("notifications.none")}

@@ -21,6 +21,7 @@ import { openUrl } from "@tauri-apps/plugin-opener";
 import { useTranslation } from "react-i18next";
 import { Copyable } from "../components/Copyable";
 import { ErrorNotice } from "../components/ErrorNotice";
+import { TableLoadingRow } from "../components/Loading";
 import { MiniCard } from "../components/MiniCard";
 import {
   useDockerAction,
@@ -511,6 +512,7 @@ export function Docker() {
                 </Fragment>
               );
             })}
+            {isLoading && <TableLoadingRow colSpan={6} />}
             {!isLoading && visibleContainers.length === 0 && (
               <tr>
                 <td className="px-3 py-3 opacity-50" colSpan={6}>

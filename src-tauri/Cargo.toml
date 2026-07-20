@@ -1,6 +1,6 @@
 [package]
 name = "unraid-admin"
-version = "0.1.0"
+version = "0.2.0"
 description = "A native-feeling macOS admin app for Unraid"
 authors = ["you"]
 edition = "2021"

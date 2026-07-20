@@ -11,6 +11,7 @@ import { GroupLabel } from "../components/GroupedList";
 import { formatKilobytes } from "../lib/format";
 import { CARD } from "../lib/ui";
 import { ErrorNotice } from "../components/ErrorNotice";
+import { TableLoadingRow } from "../components/Loading";
 import type { Share } from "../lib/types";
 
 function isEncrypted(luksStatus: string | null): boolean {
@@ -238,6 +239,7 @@ export function Shares({ host }: { host: string }) {
                   </Fragment>
                 );
               })}
+              {isLoading && <TableLoadingRow colSpan={7} />}
               {!isLoading && shares.length === 0 && (
                 <tr>
                   <td className="px-3 py-3 opacity-50" colSpan={7}>

@@ -8,6 +8,7 @@ import { Group, GroupLabel } from "../components/GroupedList";
 import { formatBitrate, formatBytes, formatKilobytes, formatUptime } from "../lib/format";
 import { CARD } from "../lib/ui";
 import { ErrorNotice } from "../components/ErrorNotice";
+import { TableLoadingRow } from "../components/Loading";
 import type { ArrayDiskStatus } from "../lib/types";
 
 function diskTone(status: ArrayDiskStatus | null): "good" | "warn" | "bad" | "neutral" {
@@ -254,7 +255,8 @@ export function Dashboard() {
                       </tr>
                     );
                   })}
-                  {disks.length === 0 && (
+                  {arrLoading && <TableLoadingRow colSpan={5} />}
+                  {!arrLoading && disks.length === 0 && (
                     <tr>
                       <td className="px-3 py-3 opacity-50" colSpan={5}>
                         {t("dashboard.noDisks")}

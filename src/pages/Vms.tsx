@@ -7,6 +7,7 @@ import { TopBar } from "../components/TopBar";
 import { GroupLabel } from "../components/GroupedList";
 import { CARD } from "../lib/ui";
 import { ErrorNotice } from "../components/ErrorNotice";
+import { TableLoadingRow } from "../components/Loading";
 import type { VmState } from "../lib/types";
 
 function tone(state: VmState): "good" | "warn" | "neutral" {
@@ -173,6 +174,7 @@ export function Vms() {
                 </tr>
               );
             })}
+            {isLoading && <TableLoadingRow colSpan={3} />}
             {!isLoading && domains.length === 0 && (
               <tr>
                 <td className="px-3 py-3 opacity-50" colSpan={3}>
