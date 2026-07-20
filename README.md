@@ -10,7 +10,16 @@
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/dashboard.png" width="720" alt="Dashboard screenshot" />
+  <img src="docs/screenshots/dashboard.png" width="820" alt="Dashboard screenshot" />
+</p>
+<p align="center">
+  <img src="docs/screenshots/docker.png" width="820" alt="Docker screenshot" />
+</p>
+<p align="center">
+  <img src="docs/screenshots/vms.png" width="820" alt="Virtual machines screenshot" />
+</p>
+<p align="center">
+  <img src="docs/screenshots/offline.png" width="820" alt="Friendly offline / connection error state" />
 </p>
 
 ## Features
@@ -23,16 +32,6 @@
 - Friendly, readable error states when the server is unreachable (instead of raw API errors)
 - Light/dark mode, Norwegian and English localization
 - Talks directly to Unraid's official GraphQL API — no polling scripts, no plugins
-
-## Screenshots
-
-| Dashboard | Docker |
-| --- | --- |
-| ![Dashboard](docs/screenshots/dashboard.png) | ![Docker](docs/screenshots/docker.png) |
-
-| Virtual machines | Offline / connection error |
-| --- | --- |
-| ![VMs](docs/screenshots/vms.png) | ![Offline state](docs/screenshots/offline.png) |
 
 ## Installation
 
